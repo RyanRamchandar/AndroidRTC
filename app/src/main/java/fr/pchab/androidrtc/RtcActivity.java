@@ -173,7 +173,7 @@ public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
         VideoRendererGui.update(localRender,
                 LOCAL_X_CONNECTING, LOCAL_Y_CONNECTING,
                 LOCAL_WIDTH_CONNECTING, LOCAL_HEIGHT_CONNECTING,
-                scalingType);
+                scalingType, false);
     }
 
     @Override
@@ -181,11 +181,11 @@ public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
         remoteStream.videoTracks.get(0).addRenderer(new VideoRenderer(remoteRender));
         VideoRendererGui.update(remoteRender,
                 REMOTE_X, REMOTE_Y,
-                REMOTE_WIDTH, REMOTE_HEIGHT, scalingType);
+                REMOTE_WIDTH, REMOTE_HEIGHT, scalingType, false);
         VideoRendererGui.update(localRender,
                 LOCAL_X_CONNECTED, LOCAL_Y_CONNECTED,
                 LOCAL_WIDTH_CONNECTED, LOCAL_HEIGHT_CONNECTED,
-                scalingType);
+                scalingType, false);
     }
 
     @Override
@@ -193,6 +193,6 @@ public class RtcActivity extends Activity implements WebRtcClient.RtcListener {
         VideoRendererGui.update(localRender,
                 LOCAL_X_CONNECTING, LOCAL_Y_CONNECTING,
                 LOCAL_WIDTH_CONNECTING, LOCAL_HEIGHT_CONNECTING,
-                scalingType);
+                scalingType, false);
     }
 }
